@@ -9,6 +9,7 @@ import lombok.*;
 public class TemplateParticular {
     @NonNull
     private String title;
+    private String titleKey;
     private String columnType;
     private String sampleValue;
     private boolean searchable;
