@@ -17,6 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class BillingParticular {
     @Id
     private String id;
+    private Integer code;
     private String title;
     private Double defaultValue;
 }
