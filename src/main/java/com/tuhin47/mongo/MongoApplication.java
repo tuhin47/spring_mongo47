@@ -1,9 +1,10 @@
 package com.tuhin47.mongo;
 
-import com.tuhin47.mongo.domain.Biller;
-import com.tuhin47.mongo.domain.BillingParticular;
+import com.tuhin47.mongo.domain.TemplateParticular;
+import com.tuhin47.mongo.domain.TemplateStructure;
 import com.tuhin47.mongo.repository.BillerRepository;
 import com.tuhin47.mongo.repository.BillingParticularRepository;
+import com.tuhin47.mongo.repository.TemplateStructureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +21,9 @@ public class MongoApplication implements CommandLineRunner {
 
     @Autowired
     private BillingParticularRepository billingParticularRepository;
+
+    @Autowired
+    private TemplateStructureRepository templateStructureRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(MongoApplication.class, args);
@@ -48,6 +52,18 @@ public class MongoApplication implements CommandLineRunner {
         );
 
         billingParticularRepository.saveAll(particulars);*/
+
+        templateStructureRepository.deleteAll();
+
+        List<TemplateParticular> particulars = Arrays.asList(
+                TemplateParticular.builder().title("Student Id").columnType("unique").searchable(true).sampleValue("123").build(),
+                TemplateParticular.builder().title("Campus").columnType("generic").searchable(true).sampleValue("Dhaka").build(),
+                TemplateParticular.builder().title("Date").columnType("generic").searchable(true).sampleValue("01/03/2021").build()
+        );
+
+        TemplateStructure templateStructure = TemplateStructure.builder().category(1).subcategory(1).templateParticulars(particulars).build();
+
+        templateStructureRepository.save(templateStructure);
 
 
     }
