@@ -1,6 +1,9 @@
 package com.tuhin47.mongo.domain;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,5 +20,6 @@ public class Biller {
     private String name;
     private Integer category;
     private Integer subcategory;
+    private TemplateStructure templateStructure;
 
 }

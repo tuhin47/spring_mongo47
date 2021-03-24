@@ -21,5 +21,7 @@ import java.util.Map;
 public class TemplateDocument {
     @Id
     private String id;
+    private String billerId;
+    private String templateId;
     Map<String, ?> data = new HashMap<>();
 }
