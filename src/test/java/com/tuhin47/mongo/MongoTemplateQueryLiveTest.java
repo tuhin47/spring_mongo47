@@ -21,6 +21,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
+import java.util.Objects;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.nullValue;
@@ -163,7 +164,7 @@ public class MongoTemplateQueryLiveTest {
         user.setEmailAddress(emailAddress);
         mongoTemplate.insert(user);
 
-        assertThat(mongoTemplate.findOne(Query.query(Criteria.where("name").is("Brendan")), User.class).getEmailAddress().getValue(), is("b@gmail.com"));
+        assertThat(Objects.requireNonNull(mongoTemplate.findOne(Query.query(Criteria.where("name").is("Brendan")), User.class)).getEmailAddress().getValue(), is("b@gmail.com"));
     }
 
     @Test
