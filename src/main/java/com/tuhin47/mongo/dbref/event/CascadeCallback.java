@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
+import java.util.Collection;
 
 public class CascadeCallback implements ReflectionUtils.FieldCallback {
 
@@ -27,10 +28,16 @@ public class CascadeCallback implements ReflectionUtils.FieldCallback {
 
             if (fieldValue != null) {
                 final FieldCallback callback = new FieldCallback();
+                /*ReflectionUtils.doWithFields(fieldValue.getClass(), callback);
 
-                ReflectionUtils.doWithFields(fieldValue.getClass(), callback);
+               getMongoOperations().save(fieldValue);*/
 
-                getMongoOperations().save(fieldValue);
+                if (fieldValue instanceof Collection<?>) {
+                    ((Collection<?>) fieldValue).forEach(o -> getMongoOperations().save(o));
+                } else {
+                    ReflectionUtils.doWithFields(fieldValue.getClass(), callback);
+                    getMongoOperations().save(fieldValue);
+                }
             }
         }
 

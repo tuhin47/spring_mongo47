@@ -1,6 +1,7 @@
 package com.tuhin47.mongo.dbref.model;
 
 import com.tuhin47.mongo.dbref.annotation.CascadeSave;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
@@ -13,10 +14,13 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.List;
+
 /*
 import com.querydsl.core.annotations.QueryEntity;
 
 @QueryEntity*/
+@Data
 @Document
 @CompoundIndexes({@CompoundIndex(name = "email_age", def = "{'email.id' : 1, 'age': 1}")})
 public class User {
@@ -32,6 +36,11 @@ public class User {
     @Field("email")
     @CascadeSave
     private EmailAddress emailAddress;
+
+    @DBRef
+    @Field("address")
+    @CascadeSave
+    private List<Address> addresses;
 
     @Transient
     private Integer yearOfBirth;
@@ -49,46 +58,6 @@ public class User {
         this.name = name;
         this.age = age;
         this.emailAddress = emailAddress;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(final String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(final Integer age) {
-        this.age = age;
-    }
-
-    public com.tuhin47.mongo.dbref.model.EmailAddress getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(final com.tuhin47.mongo.dbref.model.EmailAddress emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
-    public Integer getYearOfBirth() {
-        return yearOfBirth;
-    }
-
-    public void setYearOfBirth(final Integer yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
     }
 
 }
