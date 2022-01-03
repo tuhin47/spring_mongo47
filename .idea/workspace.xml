@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee868fd0-7e5c-49e1-85fd-c85c336ecbea" name="Default Changelist" comment="new project added">
-      <change afterPath="$PROJECT_DIR$/MoreResource.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-persistence-mongodb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-persistence-mongodb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-persistence-mongodb/spring-boot-persistence-mongodb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-persistence-mongodb/spring-boot-persistence-mongodb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-persistence-mongodb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-persistence-mongodb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mongodb-cascade/src/main/java/com/tuhin47/mongo/dbref/config/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mongodb-cascade/src/main/java/com/tuhin47/mongo/dbref/config/MongoConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +53,7 @@
     <option name="defaultAccountId" value="d5ef7f9f-5305-46b3-b79b-1d2e0e510908" />
   </component>
   <component name="ProjectId" id="1t802bbUAwkUTBFepCUfBbthalr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
     <option name="flattenModules" value="true" />
@@ -59,13 +63,72 @@
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-mongodb-cascade" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBootPersistenceApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MongoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mongo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tuhin47.mongo.dbref.MongoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootPersistenceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-persistence-mongodb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baeldung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baeldung.SpringBootPersistenceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringBootPersistenceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,6 +139,8 @@
       <option name="presentableId" value="Default" />
       <updated>1622135202949</updated>
       <workItem from="1622135204384" duration="920000" />
+      <workItem from="1641007550035" duration="2026000" />
+      <workItem from="1641238764093" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="new project added">
       <created>1622135260234</created>
@@ -90,6 +155,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -100,6 +175,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new project added" />
